@@ -1,0 +1,3 @@
+API KEY: da2-eplfklabpveuzpl3qpv5kwm5na
+
+API ENDPOINT: https://jbfhlthsy5f5tlvaj3p6nvl4mu.appsync-api.sa-east-1.amazonaws.com/graphql
