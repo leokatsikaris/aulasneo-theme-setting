@@ -1,28 +1,73 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getUsers = /* GraphQL */ `
-  query GetUsers($id: ID!) {
-    getUsers(id: $id) {
+export const getClient = /* GraphQL */ `
+  query GetClient($id: ID!) {
+    getClient(id: $id) {
       id
-      username
-      password
+      name
+      sites {
+        id
+        belong_to_client
+        name
+        theme
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const listUsers = /* GraphQL */ `
-  query ListUsers(
-    $filter: ModelUsersFilterInput
+export const listClients = /* GraphQL */ `
+  query ListClients(
+    $filter: ModelClientFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listClients(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        username
-        password
+        name
+        sites {
+          id
+          belong_to_client
+          name
+          theme
+          createdAt
+          updatedAt
+        }
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getSite = /* GraphQL */ `
+  query GetSite($id: ID!) {
+    getSite(id: $id) {
+      id
+      belong_to_client
+      name
+      theme
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listSites = /* GraphQL */ `
+  query ListSites(
+    $filter: ModelSiteFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listSites(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        belong_to_client
+        name
+        theme
         createdAt
         updatedAt
       }

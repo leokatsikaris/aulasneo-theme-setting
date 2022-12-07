@@ -1,43 +1,109 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createUsers = /* GraphQL */ `
-  mutation CreateUsers(
-    $input: CreateUsersInput!
-    $condition: ModelUsersConditionInput
+export const createClient = /* GraphQL */ `
+  mutation CreateClient(
+    $input: CreateClientInput!
+    $condition: ModelClientConditionInput
   ) {
-    createUsers(input: $input, condition: $condition) {
+    createClient(input: $input, condition: $condition) {
       id
-      username
-      password
+      name
+      sites {
+        id
+        belong_to_client
+        name
+        theme
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const updateUsers = /* GraphQL */ `
-  mutation UpdateUsers(
-    $input: UpdateUsersInput!
-    $condition: ModelUsersConditionInput
+export const updateClient = /* GraphQL */ `
+  mutation UpdateClient(
+    $input: UpdateClientInput!
+    $condition: ModelClientConditionInput
   ) {
-    updateUsers(input: $input, condition: $condition) {
+    updateClient(input: $input, condition: $condition) {
       id
-      username
-      password
+      name
+      sites {
+        id
+        belong_to_client
+        name
+        theme
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteUsers = /* GraphQL */ `
-  mutation DeleteUsers(
-    $input: DeleteUsersInput!
-    $condition: ModelUsersConditionInput
+export const deleteClient = /* GraphQL */ `
+  mutation DeleteClient(
+    $input: DeleteClientInput!
+    $condition: ModelClientConditionInput
   ) {
-    deleteUsers(input: $input, condition: $condition) {
+    deleteClient(input: $input, condition: $condition) {
       id
-      username
-      password
+      name
+      sites {
+        id
+        belong_to_client
+        name
+        theme
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createSite = /* GraphQL */ `
+  mutation CreateSite(
+    $input: CreateSiteInput!
+    $condition: ModelSiteConditionInput
+  ) {
+    createSite(input: $input, condition: $condition) {
+      id
+      belong_to_client
+      name
+      theme
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateSite = /* GraphQL */ `
+  mutation UpdateSite(
+    $input: UpdateSiteInput!
+    $condition: ModelSiteConditionInput
+  ) {
+    updateSite(input: $input, condition: $condition) {
+      id
+      belong_to_client
+      name
+      theme
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteSite = /* GraphQL */ `
+  mutation DeleteSite(
+    $input: DeleteSiteInput!
+    $condition: ModelSiteConditionInput
+  ) {
+    deleteSite(input: $input, condition: $condition) {
+      id
+      belong_to_client
+      name
+      theme
       createdAt
       updatedAt
     }
